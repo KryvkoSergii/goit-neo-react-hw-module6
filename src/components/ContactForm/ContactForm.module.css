@@ -1,0 +1,30 @@
+.form_body {
+  width: 350px;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+  align-items: center;
+}
+
+.form_field {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0px;
+}
+
+.form_field input {
+  font-size: 20px;
+}
+
+.form_field span {
+  color: red;
+}
+
+.form_body button {
+  border: 1px solid black;
+}
+
+.button_plane {
+  display: flex;
+  justify-content: center;
+}

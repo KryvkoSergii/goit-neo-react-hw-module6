@@ -1,0 +1,25 @@
+.contact_panel {
+  font-size: 20px;
+  border: 1px solid black;
+  border-radius: 10px;
+  display: flex;
+}
+
+.contact_panel svg {
+  width: 24px;
+  height: 24px;
+  margin: 0px;
+  margin-right: 5px;
+  padding: 0px;
+  transform: translateY(20%);
+}
+
+.contact_panel button {
+    margin: 20px;
+    border: 1px solid black;
+}
+
+.contact_field {
+  margin: 10px;
+  width: 200px;
+}
