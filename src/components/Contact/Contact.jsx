@@ -1,8 +1,12 @@
 import PropTypes from "prop-types";
 import Icons from "../../assets/icon.svg";
 import css from "./Contact.module.css";
+import { useDispatch } from "react-redux";
+import { deleteContact } from "../../redux/contactsSlice";
 
-export default function Contact({ contact, onDelete }) {
+export default function Contact({ contact }) {
+  const dispatch = useDispatch();
+  const onDelete = (id) => dispatch(deleteContact(id));
   return (
     <div className={css.contact_panel} id={"contact-" + contact.id}>
       <div>
@@ -35,6 +39,5 @@ let ContactItem = PropTypes.shape({
 });
 
 Contact.propTypes = {
-  contact: ContactItem,
-  onDelete: PropTypes.any,
+  contact: ContactItem
 };

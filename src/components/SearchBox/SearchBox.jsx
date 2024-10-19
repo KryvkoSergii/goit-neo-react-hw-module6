@@ -1,18 +1,16 @@
 import { useId } from "react";
 import css from "./SearchBox.module.css";
-import PropTypes from "prop-types";
+import { useDispatch } from 'react-redux';
+import { changeFilter } from "../../redux/filtersSlice"
 
-export default function SearchBox({ searchQuery, onSearchQuery }) {
+export default function SearchBox() {
+  const dispatch = useDispatch();
   const id = useId();
+  const onSearchQuery = (event) => dispatch(changeFilter(event.target.value))
   return (
     <div className={css.search_field}>
       <label htmlFor={id}>Find contacts by name</label>
-      <input type="text" id={id} value={searchQuery} onChange={onSearchQuery} />
+      <input type="text" id={id} onChange={onSearchQuery} />
     </div>
   );
 }
-
-SearchBox.propTypes = {
-  searchQuery: PropTypes.string,
-  onSearchQuery: PropTypes.any,
-};
